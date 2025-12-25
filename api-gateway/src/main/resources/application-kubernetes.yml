@@ -1,0 +1,93 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        # API Routes
+        - id: user-service
+          uri: http://user-service:9011
+          predicates:
+            - Path=/api/users/**
+        - id: product-service
+          uri: http://product-service:9012
+          predicates:
+            - Path=/api/products/**
+        - id: stock-service
+          uri: http://stock-service:9013
+          predicates:
+            - Path=/api/stocks/**
+        - id: order-service
+          uri: http://order-service:9014
+          predicates:
+            - Path=/api/orders/**
+        # Swagger UI Routes - OpenAPI specs from services
+        - id: user-service-openapi
+          uri: http://user-service:9011
+          predicates:
+            - Path=/user-service/v3/api-docs/**
+          filters:
+            - RewritePath=/user-service/v3/api-docs/(?<segment>.*), /v3/api-docs/$\{segment}
+            - RewritePath=/user-service/v3/api-docs, /v3/api-docs
+        - id: product-service-openapi
+          uri: http://product-service:9012
+          predicates:
+            - Path=/product-service/v3/api-docs/**
+          filters:
+            - RewritePath=/product-service/v3/api-docs/(?<segment>.*), /v3/api-docs/$\{segment}
+            - RewritePath=/product-service/v3/api-docs, /v3/api-docs
+        - id: stock-service-openapi
+          uri: http://stock-service:9013
+          predicates:
+            - Path=/stock-service/v3/api-docs/**
+          filters:
+            - RewritePath=/stock-service/v3/api-docs/(?<segment>.*), /v3/api-docs/$\{segment}
+            - RewritePath=/stock-service/v3/api-docs, /v3/api-docs
+        - id: order-service-openapi
+          uri: http://order-service:9014
+          predicates:
+            - Path=/order-service/v3/api-docs/**
+          filters:
+            - RewritePath=/order-service/v3/api-docs/(?<segment>.*), /v3/api-docs/$\{segment}
+            - RewritePath=/order-service/v3/api-docs, /v3/api-docs
+
+# Swagger/OpenAPI Configuration
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    urls:
+      - url: /user-service/v3/api-docs
+        name: User Service
+      - url: /product-service/v3/api-docs
+        name: Product Service
+      - url: /stock-service/v3/api-docs
+        name: Stock Service
+      - url: /order-service/v3/api-docs
+        name: Order Service
+    urls-primary-name: User Service
+
+# Service URLs for Swagger Config
+user:
+  service:
+    url: ${USER_SERVICE_URL:http://user-service:9011}
+product:
+  service:
+    url: ${PRODUCT_SERVICE_URL:http://product-service:9012}
+stock:
+  service:
+    url: ${STOCK_SERVICE_URL:http://stock-service:9013}
+order:
+  service:
+    url: ${ORDER_SERVICE_URL:http://order-service:9014}
+
+logging:
+  level:
+    org.springframework.cloud.gateway: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+

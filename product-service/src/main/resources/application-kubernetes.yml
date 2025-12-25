@@ -1,0 +1,25 @@
+server:
+  port: 9012
+
+spring:
+  application:
+    name: product-service
+  data:
+    mongodb:
+      host: ${SPRING_DATA_MONGODB_HOST:mongodb-service}
+      port: ${SPRING_DATA_MONGODB_PORT:27017}
+      database: ecommerce_products
+
+# OpenAPI/Swagger Configuration
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: false  # Disable Swagger UI in service, only expose via Gateway
+
+logging:
+  level:
+    com.eticaret.product: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+

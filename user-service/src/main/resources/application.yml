@@ -1,0 +1,74 @@
+server:
+  port: 9011
+  forward-headers-strategy: framework
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-stacktrace: on_param
+    include-exception: true
+
+spring:
+  application:
+    name: user-service
+  data:
+    mongodb:
+      host: ${SPRING_DATA_MONGODB_HOST:localhost}
+      port: 27017
+      database: ecommerce_users
+    redis:
+      host: ${SPRING_REDIS_HOST:localhost}
+      port: 6379
+  cache:
+    type: redis
+    redis:
+      time-to-live: 3600000  # 1 saat (3600 saniye = 3600000 ms)
+
+# Feign Client Configuration
+order:
+  service:
+    url: ${ORDER_SERVICE_URL:http://order-service:9014}
+
+feign:
+  circuitbreaker:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 2000
+        readTimeout: 2000
+        loggerLevel: basic
+      order-service:
+        connectTimeout: 2000
+        readTimeout: 2000
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      order-service:
+        registerHealthIndicator: true
+        slidingWindowSize: 5
+        minimumNumberOfCalls: 1
+        permittedNumberOfCallsInHalfOpenState: 2
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 5s
+        failureRateThreshold: 50
+        eventConsumerBufferSize: 10
+  timelimiter:
+    instances:
+      order-service:
+        timeoutDuration: 2s
+
+# OpenAPI/Swagger Configuration
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: true  # Enable Swagger UI
+
+logging:
+  level:
+    com.eticaret.user: INFO
+    com.eticaret.user.exception: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
