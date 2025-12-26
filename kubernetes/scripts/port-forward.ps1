@@ -56,6 +56,7 @@ Start-PortForward -ServiceName "user-service" -LocalPort 9011 -RemotePort 9011
 Start-PortForward -ServiceName "product-service" -LocalPort 9012 -RemotePort 9012
 Start-PortForward -ServiceName "stock-service" -LocalPort 9013 -RemotePort 9013
 Start-PortForward -ServiceName "order-service" -LocalPort 9014 -RemotePort 9014
+Start-PortForward -ServiceName "payment-service" -LocalPort 9015 -RemotePort 9015
 
 Write-Host ""
 Write-Host "Tüm port-forward işlemleri arka plan (Background Job) olarak başlatıldı." -ForegroundColor Green
@@ -67,6 +68,7 @@ Write-Host "  - User Service:    http://localhost:9011" -ForegroundColor White
 Write-Host "  - Product Service: http://localhost:9012" -ForegroundColor White
 Write-Host "  - Stock Service:   http://localhost:9013" -ForegroundColor White
 Write-Host "  - Order Service:   http://localhost:9014" -ForegroundColor White
+Write-Host "  - Payment Service: http://localhost:9015" -ForegroundColor White
 Write-Host ""
 Write-Host "Swagger UI Adresleri:" -ForegroundColor Yellow
 Write-Host "  - API Gateway (Aggregator): http://localhost:8090/swagger-ui.html" -ForegroundColor Cyan
@@ -74,5 +76,6 @@ Write-Host "  - User Service:             http://localhost:9011/swagger-ui.html"
 Write-Host "  - Product Service:          http://localhost:9012/swagger-ui.html" -ForegroundColor Cyan
 Write-Host "  - Stock Service:            http://localhost:9013/swagger-ui.html" -ForegroundColor Cyan
 Write-Host "  - Order Service:            http://localhost:9014/swagger-ui.html" -ForegroundColor Cyan
+Write-Host "  - Payment Service:          http://localhost:9015/swagger-ui.html" -ForegroundColor Cyan
 Write-Host "========================================" -ForegroundColor Green
 

@@ -1,0 +1,397 @@
+        sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+        sasl.oauthbearer.jwks.endpoint.url = null
+        sasl.oauthbearer.scope.claim.name = scope
+        sasl.oauthbearer.sub.claim.name = sub
+        sasl.oauthbearer.token.endpoint.url = null
+        security.protocol = PLAINTEXT
+        security.providers = null
+        send.buffer.bytes = 131072
+        session.timeout.ms = 45000
+        socket.connection.setup.timeout.max.ms = 30000
+        socket.connection.setup.timeout.ms = 10000
+        ssl.cipher.suites = null
+        ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+        ssl.endpoint.identification.algorithm = https
+        ssl.engine.factory.class = null
+        ssl.key.password = null
+        ssl.keymanager.algorithm = SunX509
+        ssl.keystore.certificate.chain = null
+        ssl.keystore.key = null
+        ssl.keystore.location = null
+        ssl.keystore.password = null
+        ssl.keystore.type = JKS
+        ssl.protocol = TLSv1.3
+        ssl.provider = null
+        ssl.secure.random.implementation = null
+        ssl.trustmanager.algorithm = PKIX
+        ssl.truststore.certificates = null
+        ssl.truststore.location = null
+        ssl.truststore.password = null
+        ssl.truststore.type = JKS
+        value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+2025-12-26 05:09:14 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2025-12-26 05:09:14 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2025-12-26 05:09:14 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1766725754973
+2025-12-26 05:09:14 [main] INFO  o.s.k.c.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer - [Consumer clientId=consumer-order-service-group-3, groupId=order-service-group] Subscribed to topic(s): order-status-updated
+2025-12-26 05:09:15 [main] INFO  c.e.order.OrderServiceApplication - Started OrderServiceApplication in 59.899 seconds (process running for 68.444)
+2025-12-26 05:09:16 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-order-service-group-2, groupId=order-service-group] Error while fetching metadata with correlation id 2 : {order-created=LEADER_NOT_AVAILABLE}
+2025-12-26 05:09:16 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-order-service-group-3, groupId=order-service-group] Error while fetching metadata with correlation id 2 : {order-status-updated=LEADER_NOT_AVAILABLE}
+2025-12-26 05:09:16 [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-order-service-group-1, groupId=order-service-group] Error while fetching metadata with correlation id 2 : {order-cancelled=LEADER_NOT_AVAILABLE}
+2025-12-26 05:09:16 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-order-service-group-2, groupId=order-service-group] Cluster ID: bb6w1XHLQVWHjnB5UuXZ5A
+2025-12-26 05:09:16 [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-order-service-group-1, groupId=order-service-group] Cluster ID: bb6w1XHLQVWHjnB5UuXZ5A
+2025-12-26 05:09:16 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-order-service-group-3, groupId=order-service-group] Cluster ID: bb6w1XHLQVWHjnB5UuXZ5A
+2025-12-26 05:09:17 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-order-service-group-2, groupId=order-service-group] Error while fetching metadata with correlation id 4 : {order-created=LEADER_NOT_AVAILABLE}
+2025-12-26 05:09:17 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-order-service-group-3, groupId=order-service-group] Error while fetching metadata with correlation id 4 : {order-status-updated=LEADER_NOT_AVAILABLE}
+2025-12-26 05:09:17 [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-order-service-group-1, groupId=order-service-group] Error while fetching metadata with correlation id 4 : {order-cancelled=LEADER_NOT_AVAILABLE}
+2025-12-26 05:09:17 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-order-service-group-3, groupId=order-service-group] Error while fetching metadata with correlation id 6 : {order-status-updated=LEADER_NOT_AVAILABLE}
+2025-12-26 05:09:17 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-order-service-group-2, groupId=order-service-group] Error while fetching metadata with correlation id 6 : {order-created=LEADER_NOT_AVAILABLE}
+2025-12-26 05:09:17 [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-order-service-group-1, groupId=order-service-group] Error while fetching metadata with correlation id 6 : {order-cancelled=LEADER_NOT_AVAILABLE}
+2025-12-26 05:09:17 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-order-service-group-3, groupId=order-service-group] Error while fetching metadata with correlation id 8 : {order-status-updated=LEADER_NOT_AVAILABLE}
+2025-12-26 05:09:17 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-order-service-group-2, groupId=order-service-group] Error while fetching metadata with correlation id 8 : {order-created=LEADER_NOT_AVAILABLE}
+2025-12-26 05:09:17 [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-order-service-group-1, groupId=order-service-group] Error while fetching metadata with correlation id 8 : {order-cancelled=LEADER_NOT_AVAILABLE}
+2025-12-26 05:09:19 [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-1, groupId=order-service-group] Discovered group coordinator kafka-service:9092 (id: 2147483646 rack: null)
+2025-12-26 05:09:19 [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-1, groupId=order-service-group] (Re-)joining group
+2025-12-26 05:09:19 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-3, groupId=order-service-group] Discovered group coordinator kafka-service:9092 (id: 2147483646 rack: null)
+2025-12-26 05:09:19 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-3, groupId=order-service-group] (Re-)joining group
+2025-12-26 05:09:19 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-2, groupId=order-service-group] Discovered group coordinator kafka-service:9092 (id: 2147483646 rack: null)
+2025-12-26 05:09:19 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-2, groupId=order-service-group] (Re-)joining group
+2025-12-26 05:09:19 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-3, groupId=order-service-group] Request joining group due to: need to re-join with the given member-id: consumer-order-service-group-3-a363fbe3-c574-42fa-857f-8af460e2b358
+2025-12-26 05:09:19 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-3, groupId=order-service-group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2025-12-26 05:09:19 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-3, groupId=order-service-group] (Re-)joining group
+2025-12-26 05:09:19 [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-1, groupId=order-service-group] Request joining group due to: need to re-join with the given member-id: consumer-order-service-group-1-f1c794c4-07b9-4d50-b1eb-dc3ebfa5ba79
+2025-12-26 05:09:19 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-2, groupId=order-service-group] Request joining group due to: need to re-join with the given member-id: consumer-order-service-group-2-1700c00f-f993-4f3e-b929-ce531faa1921
+2025-12-26 05:09:19 [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-1, groupId=order-service-group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2025-12-26 05:09:19 [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-1, groupId=order-service-group] (Re-)joining group
+2025-12-26 05:09:19 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-2, groupId=order-service-group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2025-12-26 05:09:19 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-2, groupId=order-service-group] (Re-)joining group
+2025-12-26 05:09:25 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-3, groupId=order-service-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-order-service-group-3-a363fbe3-c574-42fa-857f-8af460e2b358', protocol='range'}
+2025-12-26 05:09:25 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-2, groupId=order-service-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-order-service-group-2-1700c00f-f993-4f3e-b929-ce531faa1921', protocol='range'}
+2025-12-26 05:09:25 [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-1, groupId=order-service-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-order-service-group-1-f1c794c4-07b9-4d50-b1eb-dc3ebfa5ba79', protocol='range'}
+2025-12-26 05:09:25 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-2, groupId=order-service-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-order-service-group-2-1700c00f-f993-4f3e-b929-ce531faa1921', protocol='range'}
+2025-12-26 05:09:25 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-3, groupId=order-service-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-order-service-group-3-a363fbe3-c574-42fa-857f-8af460e2b358', protocol='range'}
+2025-12-26 05:09:25 [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-1, groupId=order-service-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-order-service-group-1-f1c794c4-07b9-4d50-b1eb-dc3ebfa5ba79', protocol='range'}
+2025-12-26 05:09:25 [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-1, groupId=order-service-group] Notifying assignor about the new Assignment(partitions=[])
+2025-12-26 05:09:25 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-3, groupId=order-service-group] Notifying assignor about the new Assignment(partitions=[order-status-updated-0])
+2025-12-26 05:09:25 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-2, groupId=order-service-group] Notifying assignor about the new Assignment(partitions=[])
+2025-12-26 05:09:25 [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-1, groupId=order-service-group] Adding newly assigned partitions:
+2025-12-26 05:09:25 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-2, groupId=order-service-group] Adding newly assigned partitions:
+2025-12-26 05:09:25 [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - order-service-group: partitions assigned: []
+2025-12-26 05:09:25 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - order-service-group: partitions assigned: []
+2025-12-26 05:09:25 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-3, groupId=order-service-group] Adding newly assigned partitions: order-status-updated-0
+2025-12-26 05:09:25 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-order-service-group-3, groupId=order-service-group] Found no committed offset for partition order-status-updated-0
+2025-12-26 05:09:25 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-order-service-group-3, groupId=order-service-group] Resetting offset for partition order-status-updated-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka-service:9092 (id: 1 rack: null)], epoch=0}}.
+2025-12-26 05:09:25 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - order-service-group: partitions assigned: [order-status-updated-0]
+2025-12-26 05:18:16 [org.springframework.kafka.KafkaListenerEndpointContainer#2-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-order-service-group-1, groupId=order-service-group] Node -1 disconnected.
+2025-12-26 05:18:17 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-order-service-group-2, groupId=order-service-group] Node -1 disconnected.
+2025-12-26 05:18:17 [org.springframework.kafka.KafkaListenerEndpointContainer#1-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-order-service-group-3, groupId=order-service-group] Node -1 disconnected.
+2025-12-26 05:39:17 [http-nio-9014-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-26 05:39:17 [http-nio-9014-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-26 05:39:18 [http-nio-9014-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 93 ms
+2025-12-26 05:39:19 [http-nio-9014-exec-1] INFO  c.e.order.controller.OrderController - POST /orders - Yeni sipariş oluşturma isteği alındı: userId=1, items=1
+2025-12-26 05:39:19 [http-nio-9014-exec-1] INFO  c.e.order.service.OrderServiceImpl - Yeni sipariş oluşturuluyor: userId=1, items=1
+2025-12-26 05:39:22 [http-nio-9014-exec-1] INFO  c.e.order.service.OrderServiceImpl - Kullanıcı doğrulandı: userId=1, username=furkan
+2025-12-26 05:39:25 [http-nio-9014-exec-1] INFO  c.e.order.service.OrderServiceImpl - Stok rezerve edildi: productId=694d15853752ac4fc7dcf889, quantity=1
+2025-12-26 05:39:25 [http-nio-9014-exec-1] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values:
+        acks = -1
+        auto.include.jmx.reporter = true
+        batch.size = 16384
+        bootstrap.servers = [kafka-service:9092]
+        buffer.memory = 33554432
+        client.dns.lookup = use_all_dns_ips
+        client.id = producer-1
+        compression.type = none
+        connections.max.idle.ms = 540000
+        delivery.timeout.ms = 120000
+        enable.idempotence = true
+        interceptor.classes = []
+        key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+        linger.ms = 0
+        max.block.ms = 60000
+        max.in.flight.requests.per.connection = 5
+        max.request.size = 1048576
+        metadata.max.age.ms = 300000
+        metadata.max.idle.ms = 300000
+        metric.reporters = []
+        metrics.num.samples = 2
+        metrics.recording.level = INFO
+        metrics.sample.window.ms = 30000
+        partitioner.adaptive.partitioning.enable = true
+        partitioner.availability.timeout.ms = 0
+        partitioner.class = null
+        partitioner.ignore.keys = false
+        receive.buffer.bytes = 32768
+        reconnect.backoff.max.ms = 1000
+        reconnect.backoff.ms = 50
+        request.timeout.ms = 30000
+        retries = 2147483647
+        retry.backoff.ms = 100
+        sasl.client.callback.handler.class = null
+        sasl.jaas.config = null
+        sasl.kerberos.kinit.cmd = /usr/bin/kinit
+        sasl.kerberos.min.time.before.relogin = 60000
+        sasl.kerberos.service.name = null
+        sasl.kerberos.ticket.renew.jitter = 0.05
+        sasl.kerberos.ticket.renew.window.factor = 0.8
+        sasl.login.callback.handler.class = null
+        sasl.login.class = null
+        sasl.login.connect.timeout.ms = null
+        sasl.login.read.timeout.ms = null
+        sasl.login.refresh.buffer.seconds = 300
+        sasl.login.refresh.min.period.seconds = 60
+        sasl.login.refresh.window.factor = 0.8
+        sasl.login.refresh.window.jitter = 0.05
+        sasl.login.retry.backoff.max.ms = 10000
+        sasl.login.retry.backoff.ms = 100
+        sasl.mechanism = GSSAPI
+        sasl.oauthbearer.clock.skew.seconds = 30
+        sasl.oauthbearer.expected.audience = null
+        sasl.oauthbearer.expected.issuer = null
+        sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+        sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+        sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+        sasl.oauthbearer.jwks.endpoint.url = null
+        sasl.oauthbearer.scope.claim.name = scope
+        sasl.oauthbearer.sub.claim.name = sub
+        sasl.oauthbearer.token.endpoint.url = null
+        security.protocol = PLAINTEXT
+        security.providers = null
+        send.buffer.bytes = 131072
+        socket.connection.setup.timeout.max.ms = 30000
+        socket.connection.setup.timeout.ms = 10000
+        ssl.cipher.suites = null
+        ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+        ssl.endpoint.identification.algorithm = https
+        ssl.engine.factory.class = null
+        ssl.key.password = null
+        ssl.keymanager.algorithm = SunX509
+        ssl.keystore.certificate.chain = null
+        ssl.keystore.key = null
+        ssl.keystore.location = null
+        ssl.keystore.password = null
+        ssl.keystore.type = JKS
+        ssl.protocol = TLSv1.3
+        ssl.provider = null
+        ssl.secure.random.implementation = null
+        ssl.trustmanager.algorithm = PKIX
+        ssl.truststore.certificates = null
+        ssl.truststore.location = null
+        ssl.truststore.password = null
+        ssl.truststore.type = JKS
+        transaction.timeout.ms = 60000
+        transactional.id = null
+        value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+2025-12-26 05:39:25 [http-nio-9014-exec-1] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-12-26 05:39:25 [http-nio-9014-exec-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2025-12-26 05:39:25 [http-nio-9014-exec-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2025-12-26 05:39:25 [http-nio-9014-exec-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1766727565671
+2025-12-26 05:39:25 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: bb6w1XHLQVWHjnB5UuXZ5A
+2025-12-26 05:39:25 [kafka-producer-network-thread | producer-1] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-1] ProducerId set to 1 with epoch 0
+2025-12-26 05:39:25 [http-nio-9014-exec-1] INFO  c.e.order.service.OrderServiceImpl - Kafka'ya sipariş mesajı gönderildi: orderId=12
+2025-12-26 05:39:25 [http-nio-9014-exec-1] INFO  c.e.order.service.OrderServiceImpl - Sipariş başarıyla oluşturuldu: orderId=12, userId=1, totalAmount=49000, items=1
+2025-12-26 05:39:25 [http-nio-9014-exec-1] INFO  c.e.order.controller.OrderController - POST /orders - Sipariş başarıyla oluşturuldu: id=12
+2025-12-26 05:39:45 [http-nio-9014-exec-2] INFO  c.e.order.controller.OrderController - POST /orders - Yeni sipariş oluşturma isteği alındı: userId=1, items=1
+2025-12-26 05:39:45 [http-nio-9014-exec-2] INFO  c.e.order.service.OrderServiceImpl - Yeni sipariş oluşturuluyor: userId=1, items=1
+2025-12-26 05:39:45 [http-nio-9014-exec-2] INFO  c.e.order.service.OrderServiceImpl - Kullanıcı doğrulandı: userId=1, username=furkan
+2025-12-26 05:39:45 [http-nio-9014-exec-2] INFO  c.e.order.service.OrderServiceImpl - Stok rezerve edildi: productId=694d15853752ac4fc7dcf889, quantity=1
+2025-12-26 05:39:45 [http-nio-9014-exec-2] INFO  c.e.order.service.OrderServiceImpl - Kafka'ya sipariş mesajı gönderildi: orderId=13
+2025-12-26 05:39:45 [http-nio-9014-exec-2] INFO  c.e.order.service.OrderServiceImpl - Sipariş başarıyla oluşturuldu: orderId=13, userId=1, totalAmount=49000, items=1
+2025-12-26 05:39:45 [http-nio-9014-exec-2] INFO  c.e.order.controller.OrderController - POST /orders - Sipariş başarıyla oluşturuldu: id=13
+        metric.reporters = []
+        metrics.num.samples = 2
+        metrics.recording.level = INFO
+        metrics.sample.window.ms = 30000
+        partitioner.adaptive.partitioning.enable = true
+        partitioner.availability.timeout.ms = 0
+        partitioner.class = null
+        partitioner.ignore.keys = false
+        receive.buffer.bytes = 32768
+        reconnect.backoff.max.ms = 1000
+        reconnect.backoff.ms = 50
+        request.timeout.ms = 30000
+        retries = 2147483647
+        retry.backoff.ms = 100
+        sasl.client.callback.handler.class = null
+        sasl.jaas.config = null
+        sasl.kerberos.kinit.cmd = /usr/bin/kinit
+        sasl.kerberos.min.time.before.relogin = 60000
+        sasl.kerberos.service.name = null
+        sasl.kerberos.ticket.renew.jitter = 0.05
+        sasl.kerberos.ticket.renew.window.factor = 0.8
+        sasl.login.callback.handler.class = null
+        sasl.login.class = null
+        sasl.login.connect.timeout.ms = null
+        sasl.login.read.timeout.ms = null
+        sasl.login.refresh.buffer.seconds = 300
+        sasl.login.refresh.min.period.seconds = 60
+        sasl.login.refresh.window.factor = 0.8
+        sasl.login.refresh.window.jitter = 0.05
+        sasl.login.retry.backoff.max.ms = 10000
+        sasl.login.retry.backoff.ms = 100
+        sasl.mechanism = GSSAPI
+        sasl.oauthbearer.clock.skew.seconds = 30
+        sasl.oauthbearer.expected.audience = null
+        sasl.oauthbearer.expected.issuer = null
+        sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+        sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+        sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+        sasl.oauthbearer.jwks.endpoint.url = null
+        sasl.oauthbearer.scope.claim.name = scope
+        sasl.oauthbearer.sub.claim.name = sub
+        sasl.oauthbearer.token.endpoint.url = null
+        security.protocol = PLAINTEXT
+        security.providers = null
+        send.buffer.bytes = 131072
+        socket.connection.setup.timeout.max.ms = 30000
+        socket.connection.setup.timeout.ms = 10000
+        ssl.cipher.suites = null
+        ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+        ssl.endpoint.identification.algorithm = https
+        ssl.engine.factory.class = null
+        ssl.key.password = null
+        ssl.keymanager.algorithm = SunX509
+        ssl.keystore.certificate.chain = null
+        ssl.keystore.key = null
+        ssl.keystore.location = null
+        ssl.keystore.password = null
+        ssl.keystore.type = JKS
+        ssl.protocol = TLSv1.3
+        ssl.provider = null
+        ssl.secure.random.implementation = null
+        ssl.trustmanager.algorithm = PKIX
+        ssl.truststore.certificates = null
+        ssl.truststore.location = null
+        ssl.truststore.password = null
+        ssl.truststore.type = JKS
+        transaction.timeout.ms = 60000
+        transactional.id = null
+        value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+2025-12-26 05:22:11 [http-nio-9014-exec-3] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-12-26 05:22:11 [http-nio-9014-exec-3] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.6.0
+2025-12-26 05:22:11 [http-nio-9014-exec-3] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 60e845626d8a465a
+2025-12-26 05:22:11 [http-nio-9014-exec-3] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1766726531719
+2025-12-26 05:22:11 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: bb6w1XHLQVWHjnB5UuXZ5A
+2025-12-26 05:22:11 [kafka-producer-network-thread | producer-1] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-1] ProducerId set to 0 with epoch 0
+2025-12-26 05:22:11 [http-nio-9014-exec-3] INFO  c.e.order.service.OrderServiceImpl - Kafka'ya sipariş mesajı gönderildi: orderId=11
+2025-12-26 05:22:11 [http-nio-9014-exec-3] INFO  c.e.order.service.OrderServiceImpl - Sipariş başarıyla oluşturuldu: orderId=11, userId=1, totalAmount=49000, items=1
+2025-12-26 05:22:11 [http-nio-9014-exec-3] INFO  c.e.order.controller.OrderController - POST /orders - Sipariş başarıyla oluşturuldu: id=11
+2025-12-26 05:22:12 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ERROR o.s.k.listener.DefaultErrorHandler - Backoff FixedBackOff{interval=0, currentAttempts=1, maxAttempts=0} exhausted for order-created-0@0
+org.springframework.kafka.listener.ListenerExecutionFailedException: invokeHandler Failed
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2926)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2871)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2835)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$56(KafkaMessageListenerContainer.java:2753)
+        at io.micrometer.observation.Observation.observe(Observation.java:565)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2751)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2604)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2490)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2132)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1487)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1451)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1322)
+        at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+        at java.base/java.lang.Thread.run(Thread.java:840)
+        Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+                at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.checkAckArg(MessagingMessageListenerAdapter.java:397)
+                at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:380)
+                at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)
+                at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)
+                at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2857)
+Caused by: java.lang.IllegalStateException: No Acknowledgment available as an argument, the listener container must have a MANUAL AckMode to populate the Acknowledgment.
+        at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.checkAckArg(MessagingMessageListenerAdapter.java:397)
+        at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:380)
+        at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)
+        at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2857)
+        ... 12 common frames omitted
+Caused by: org.springframework.messaging.converter.MessageConversionException: Cannot handle message
+        ... 16 common frames omitted
+Caused by: org.springframework.messaging.converter.MessageConversionException: Cannot convert from [com.eticaret.order.model.Order] to [org.springframework.kafka.support.Acknowledgment] for GenericMessage [payload=Order(id=11, userId=1, items=[OrderItem(productId=694d15853752ac4fc7dcf889, productName=Samsung s25, quantity=1, price=49000)], totalAmount=49000, status=PENDING, shippingAddress=string, createdAt=2025-12-26T05:22:11.280935343, updatedAt=2025-12-26T05:22:11.280950044), headers={kafka_offset=0, kafka_consumer=org.springframework.kafka.core.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer@14e1591c, kafka_timestampType=CREATE_TIME, kafka_receivedPartitionId=0, kafka_receivedTopic=order-created, kafka_receivedTimestamp=1766726531816, kafka_groupId=order-service-group}]
+        at org.springframework.messaging.handler.annotation.support.PayloadMethodArgumentResolver.resolveArgument(PayloadMethodArgumentResolver.java:151)
+        at org.springframework.kafka.annotation.KafkaNullAwarePayloadArgumentResolver.resolveArgument(KafkaNullAwarePayloadArgumentResolver.java:46)
+        at org.springframework.messaging.handler.invocation.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:118)
+        at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:147)
+        at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+        at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)
+        at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:375)
+        ... 15 common frames omitted
+2025-12-26 05:31:12 [kafka-producer-network-thread | producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
+2025-12-26 05:39:25 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ERROR o.s.k.listener.DefaultErrorHandler - Backoff FixedBackOff{interval=0, currentAttempts=1, maxAttempts=0} exhausted for order-created-0@1
+org.springframework.kafka.listener.ListenerExecutionFailedException: invokeHandler Failed
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2926)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2871)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2835)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$56(KafkaMessageListenerContainer.java:2753)
+        at io.micrometer.observation.Observation.observe(Observation.java:565)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2751)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2604)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2490)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2132)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1487)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1451)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1322)
+        at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+        at java.base/java.lang.Thread.run(Thread.java:840)
+        Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+                at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.checkAckArg(MessagingMessageListenerAdapter.java:397)
+                at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:380)
+                at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)
+                at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)
+                at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2857)
+Caused by: java.lang.IllegalStateException: No Acknowledgment available as an argument, the listener container must have a MANUAL AckMode to populate the Acknowledgment.
+        at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.checkAckArg(MessagingMessageListenerAdapter.java:397)
+        at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:380)
+        at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)
+        at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2857)
+        ... 12 common frames omitted
+Caused by: org.springframework.messaging.converter.MessageConversionException: Cannot handle message
+        ... 16 common frames omitted
+Caused by: org.springframework.messaging.converter.MessageConversionException: Cannot convert from [com.eticaret.order.model.Order] to [org.springframework.kafka.support.Acknowledgment] for GenericMessage [payload=Order(id=12, userId=1, items=[OrderItem(productId=694d15853752ac4fc7dcf889, productName=Samsung s25, quantity=1, price=49000)], totalAmount=49000, status=PENDING, shippingAddress=string, createdAt=2025-12-26T05:39:25.127688886, updatedAt=2025-12-26T05:39:25.127696886), headers={kafka_offset=1, kafka_consumer=org.springframework.kafka.core.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer@14e1591c, kafka_timestampType=CREATE_TIME, kafka_receivedPartitionId=0, kafka_receivedTopic=order-created, kafka_receivedTimestamp=1766727565678, kafka_groupId=order-service-group}]
+        at org.springframework.messaging.handler.annotation.support.PayloadMethodArgumentResolver.resolveArgument(PayloadMethodArgumentResolver.java:151)
+        at org.springframework.kafka.annotation.KafkaNullAwarePayloadArgumentResolver.resolveArgument(KafkaNullAwarePayloadArgumentResolver.java:46)
+        at org.springframework.messaging.handler.invocation.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:118)
+        at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:147)
+        at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+        at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)
+        at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:375)
+        ... 15 common frames omitted
+2025-12-26 05:39:45 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ERROR o.s.k.listener.DefaultErrorHandler - Backoff FixedBackOff{interval=0, currentAttempts=1, maxAttempts=0} exhausted for order-created-0@2
+org.springframework.kafka.listener.ListenerExecutionFailedException: invokeHandler Failed
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2926)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2871)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2835)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$56(KafkaMessageListenerContainer.java:2753)
+        at io.micrometer.observation.Observation.observe(Observation.java:565)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2751)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2604)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2490)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2132)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1487)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1451)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1322)
+        at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+        at java.base/java.lang.Thread.run(Thread.java:840)
+        Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+                at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.checkAckArg(MessagingMessageListenerAdapter.java:397)
+                at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:380)
+                at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)
+                at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)
+                at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2857)
+Caused by: java.lang.IllegalStateException: No Acknowledgment available as an argument, the listener container must have a MANUAL AckMode to populate the Acknowledgment.
+        at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.checkAckArg(MessagingMessageListenerAdapter.java:397)
+        at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:380)
+        at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92)
+        at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2857)
+        ... 12 common frames omitted
+Caused by: org.springframework.messaging.converter.MessageConversionException: Cannot handle message
+        ... 16 common frames omitted
+Caused by: org.springframework.messaging.converter.MessageConversionException: Cannot convert from [com.eticaret.order.model.Order] to [org.springframework.kafka.support.Acknowledgment] for GenericMessage [payload=Order(id=13, userId=1, items=[OrderItem(productId=694d15853752ac4fc7dcf889, productName=Samsung s25, quantity=1, price=49000)], totalAmount=49000, status=PENDING, shippingAddress=string, createdAt=2025-12-26T05:39:45.716868739, updatedAt=2025-12-26T05:39:45.716885140), headers={kafka_offset=2, kafka_consumer=org.springframework.kafka.core.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer@14e1591c, kafka_timestampType=CREATE_TIME, kafka_receivedPartitionId=0, kafka_receivedTopic=order-created, kafka_receivedTimestamp=1766727585722, kafka_groupId=order-service-group}]
+        at org.springframework.messaging.handler.annotation.support.PayloadMethodArgumentResolver.resolveArgument(PayloadMethodArgumentResolver.java:151)
+        at org.springframework.kafka.annotation.KafkaNullAwarePayloadArgumentResolver.resolveArgument(KafkaNullAwarePayloadArgumentResolver.java:46)
+        at org.springframework.messaging.handler.invocation.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:118)
+        at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:147)
+        at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+        at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56)
+        at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:375)
+        ... 15 common frames omitted

@@ -27,6 +27,8 @@ spring:
       enable-auto-commit: false
       properties:
         spring.json.trusted.packages: "*"
+    listener:
+      ack-mode: manual  # Required for manual acknowledgment
 
 # Feign Client Configuration
 user:

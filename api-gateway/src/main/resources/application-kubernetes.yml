@@ -24,6 +24,10 @@ spring:
           uri: http://order-service:9014
           predicates:
             - Path=/api/orders/**
+        - id: payment-service
+          uri: http://payment-service:9015
+          predicates:
+            - Path=/api/payments/**
         # Swagger UI Routes - OpenAPI specs from services
         - id: user-service-openapi
           uri: http://user-service:9011
@@ -53,6 +57,17 @@ spring:
           filters:
             - RewritePath=/order-service/v3/api-docs/(?<segment>.*), /v3/api-docs/$\{segment}
             - RewritePath=/order-service/v3/api-docs, /v3/api-docs
+        - id: payment-service-openapi
+          uri: http://payment-service:9015
+          predicates:
+            - Path=/payment-service/v3/api-docs/**
+          filters:
+            - RewritePath=/payment-service/v3/api-docs/(?<segment>.*), /v3/api-docs/$\{segment}
+            - RewritePath=/payment-service/v3/api-docs, /v3/api-docs
+        - id: payment-service-direct
+          uri: http://payment-service:9015
+          predicates:
+            - Path=/v3/api-docs/payment-service
 
 # Swagger/OpenAPI Configuration
 springdoc:
@@ -61,14 +76,16 @@ springdoc:
   swagger-ui:
     path: /swagger-ui.html
     urls:
-      - url: /user-service/v3/api-docs
-        name: User Service
-      - url: /product-service/v3/api-docs
-        name: Product Service
-      - url: /stock-service/v3/api-docs
-        name: Stock Service
-      - url: /order-service/v3/api-docs
-        name: Order Service
+      - url: "/user-service/v3/api-docs"
+        name: "User Service"
+      - url: "/product-service/v3/api-docs"
+        name: "Product Service"
+      - url: "/stock-service/v3/api-docs"
+        name: "Stock Service"
+      - url: "/order-service/v3/api-docs"
+        name: "Order Service"
+      - url: "/payment-service/v3/api-docs"
+        name: "Payment Service"
     urls-primary-name: User Service
 
 # Service URLs for Swagger Config
@@ -84,6 +101,9 @@ stock:
 order:
   service:
     url: ${ORDER_SERVICE_URL:http://order-service:9014}
+payment:
+  service:
+    url: ${PAYMENT_SERVICE_URL:http://payment-service:9015}
 
 logging:
   level:

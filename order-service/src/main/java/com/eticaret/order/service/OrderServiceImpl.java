@@ -90,7 +90,6 @@ public class OrderServiceImpl implements IOrderService {
             
             // Ürün bilgilerini güncelle
             item.setProductName(product.getName());
-            item.setPrice(product.getPrice());
             
             // Stok kontrolü
             StockDTO stock;

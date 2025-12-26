@@ -55,7 +55,6 @@ public class OrderMapper {
         item.setProductId(dto.getProductId());
         item.setProductName(dto.getProductName());
         item.setQuantity(dto.getQuantity());
-        item.setPrice(dto.getPrice());
         return item;
     }
     
@@ -64,7 +63,6 @@ public class OrderMapper {
         dto.setProductId(item.getProductId());
         dto.setProductName(item.getProductName());
         dto.setQuantity(item.getQuantity());
-        dto.setPrice(item.getPrice());
         return dto;
     }
 }

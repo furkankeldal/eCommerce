@@ -6,7 +6,7 @@ Write-Host "========================================" -ForegroundColor Green
 Write-Host ""
 
 $rootDir = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
-$services = @("user-service", "product-service", "stock-service", "order-service", "api-gateway")
+$services = @("user-service", "product-service", "stock-service", "order-service", "api-gateway", "payment-service")
 
 Write-Host "Build edilecek servisler:" -ForegroundColor Yellow
 foreach ($service in $services) {
@@ -67,7 +67,7 @@ Write-Host "Kubernetes Pod'ları Restart Ediliyor" -ForegroundColor Cyan
 Write-Host "========================================" -ForegroundColor Cyan
 Write-Host ""
 
-$deployments = @("user-service", "product-service", "stock-service", "order-service", "api-gateway")
+$deployments = @("user-service", "product-service", "stock-service", "order-service", "api-gateway", "payment-service")
 
 foreach ($deployment in $deployments) {
     Write-Host "Restart ediliyor: $deployment" -ForegroundColor Yellow

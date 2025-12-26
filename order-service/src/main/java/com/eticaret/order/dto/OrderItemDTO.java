@@ -22,9 +22,5 @@ public class OrderItemDTO {
     @NotNull
     @Min(1)
     private Integer quantity;
-    
-    @NotNull
-    @Min(0)
-    private BigDecimal price;
 }
 

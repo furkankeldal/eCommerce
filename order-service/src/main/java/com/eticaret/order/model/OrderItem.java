@@ -21,9 +21,5 @@ public class OrderItem {
     @NotNull
     @Min(1)
     private Integer quantity;
-    
-    @NotNull
-    @Min(0)
-    private BigDecimal price;
 }
 

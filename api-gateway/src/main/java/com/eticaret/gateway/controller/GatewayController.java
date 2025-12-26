@@ -25,13 +25,15 @@ public class GatewayController {
                             "users": "/api/users",
                             "products": "/api/products",
                             "stocks": "/api/stocks",
-                            "orders": "/api/orders"
+                            "orders": "/api/orders",
+                            "payments": "/api/payments"
                         },
                         "swagger": {
                             "user-service": "http://localhost:8090/swagger/users/index.html",
                             "product-service": "http://localhost:8090/swagger/products/index.html",
                             "stock-service": "http://localhost:8090/swagger/stocks/index.html",
-                            "order-service": "http://localhost:8090/swagger/orders/index.html"
+                            "order-service": "http://localhost:8090/swagger/orders/index.html",
+                            "payment-service": "http://localhost:8090/swagger/payments/index.html"
                         },
                         "note": "Swagger UI'lar ve API istekleri API Gateway üzerinden yapılmalıdır."
                     }
