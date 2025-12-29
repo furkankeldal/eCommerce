@@ -51,38 +51,6 @@ data:
                 - RewritePath=/payment-service/(?<targetPath>.*), /$\{targetPath}
                 - PreserveHostHeader
             
-            # Legacy direct API Routes (without prefix)
-            - id: user-service-direct
-              uri: http://${USER_SERVICE_HOST:user-service}:9011
-              predicates:
-                - Path=/api/users/**
-              filters:
-                - PreserveHostHeader
-            - id: product-service-direct
-              uri: http://${PRODUCT_SERVICE_HOST:product-service}:9012
-              predicates:
-                - Path=/api/products/**
-              filters:
-                - PreserveHostHeader
-            - id: stock-service-direct
-              uri: http://${STOCK_SERVICE_HOST:stock-service}:9013
-              predicates:
-                - Path=/api/stocks/**
-              filters:
-                - PreserveHostHeader
-            - id: order-service-direct
-              uri: http://${ORDER_SERVICE_HOST:order-service}:9014
-              predicates:
-                - Path=/api/orders/**
-              filters:
-                - PreserveHostHeader
-            - id: payment-service-direct
-              uri: http://${PAYMENT_SERVICE_HOST:payment-service}:9015
-              predicates:
-                - Path=/api/payments/**
-              filters:
-                - PreserveHostHeader
-
     # Swagger/OpenAPI Configuration
     springdoc:
       api-docs:
@@ -100,7 +68,7 @@ data:
             name: Order Service
           - url: /payment-service/v3/api-docs
             name: Payment Service
-        urls-primary-name: User Service
+        urls-primary-name: API Gateway Service
 
     # Service URLs for Swagger Config
     user:
